@@ -1,0 +1,155 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  width: 100%;
+  min-width: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-title {
+  font-size: 22px;
+  font-family: roboto;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.login-subtitle {
+  font-size: 16px;
+  font-family: roboto;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #777777;
+  border-radius: 8px;
+  outline: none;
+}
+
+.login-button {
+  width: 30%;
+  align-self: flex-end;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  background-color: #7695ec;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-button:hover {
+  background-color: #005fcc;
+}
+
+.login-button:disabled:hover {
+  background-color: #ccc;
+}
+
+.login-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: #7695ec;
+  border-radius: 0 0 4px 4px;
+  animation: progressAnimation 2s ease-out forwards;
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+body.dark .login-container {
+  background-color: #333;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .login-title {
+  color: #f9f9f9;
+}
+
+body.dark .login-subtitle {
+  color: #ccc;
+}
+
+body.dark .login-input {
+  border: 1px solid #444;
+  background-color: #555;
+  color: #f9f9f9;
+}
+
+body.dark .login-button {
+  background-color: #7695ec;
+}
+
+body.dark .login-button:hover {
+  background-color: #003b88;
+}
+
+body.dark .login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+body.dark .login-button:disabled:hover {
+  background-color: #ccc;
+}
+
+body.dark .login-progress-bar {
+  background-color: #005fcc;
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    min-width: unset;
+    padding: 50px 16px;
+    border-radius: 8px;
+    width: 90vw;
+  }
+
+  .login-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .login-subtitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .login-input {
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 16px;
+  }
+
+  .login-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 0.6rem;
+    align-self: stretch;
+    text-align: center;
+  }
+}
