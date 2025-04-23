@@ -27,7 +27,7 @@ https://frontend-challenge-olive.vercel.app/
 
 5. O servidor local será iniciado. O terminal informará o link, geralmente http://localhost:5173.
 
-#Funcionalidades extras
+## ✅ Funcionalidades extras
 
 Dark mode (modo escuro)
 
